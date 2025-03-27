@@ -1,0 +1,74 @@
+openapi: "3.0.1"
+info:
+  title: "Attribute Extraction Request API"
+  description: "This is a collaboration API provided from C-3-1 to C-3-2"
+  version: "1.0.0"
+servers:
+- url: "https://mycompany.com/{basePath}"
+  variables:
+    basePath:
+      default: "v1"
+paths:
+  /:
+    post:
+      operationId: "requestAttribuuteExtraction"
+      requestBody:
+        description: Create a new pet in the store
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AttrExtractReq'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/AttrExtractReq'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/AttrExtractReq'
+        required: true
+      responses:
+        "202":
+          description: "Accepted"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AttrExtractRes"
+        "501":
+          description: "Invalid Request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AttrExtractRes"
+      security:
+      - api_key: []
+components:
+  schemas:
+    AttrExtractReq:
+      title: Attribute Extraction Request Schema
+      type: object
+      properties:
+        id:
+          type: string
+          description: UUID of near-miss data
+          example: 78aa302c-1600-44b3-a331-e4659c0b28a1
+        uri:
+          type: string
+          description: URI of near-miss data located
+          example: s3://bucket-name/78aa302c-1600-44b3-a331-e4659c0b28a1
+          format: uri
+
+    AttrExtractRes:
+      title: Attribute Extraction Response Schema
+      type: object
+      properties:
+        message:
+          type: string
+          description: message
+
+  securitySchemes:
+    api_key:
+      type: "apiKey"
+      name: "x-api-key"
+      in: "header"
+          
+
+

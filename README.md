@@ -1,4 +1,4 @@
-# C3-1
+# シミュレーション生成・利用アプリ
 
 ## 1. 説明
 
@@ -7,6 +7,7 @@
 
 1. **SIM生成アプリ**： ドラレコデータからシュミレーションデータを生成するためのアプリケーション（詳細は[**README**](./sim-generation-apps/)を参照ください。）  
 2. **SIM利用アプリ**： SIM生成アプリで生成されたシュミレーションデータを公開するためのアプリケーション （詳細は[**README**](./sim-usage-apps/)を参照ください。）  
+3. **属性抽出依頼API定義**： ニアミスデータの属性情報抽出依頼を受け付けるためのAPI定義 （詳細は[**README**](./attr-extract-req-api/)を参照ください。） 
 
 ## 2. 問い合わせ・要望の対応
 
@@ -20,3 +21,4 @@
 
 1. **SIM生成アプリ**： GNU AFFERO GENERAL PUBLIC LICENSE, Version 3  
 2. **SIM利用アプリ**： Apache License, Version 2.0  
+3. **属性抽出依頼API定義**: Apache License, Version 2.0
