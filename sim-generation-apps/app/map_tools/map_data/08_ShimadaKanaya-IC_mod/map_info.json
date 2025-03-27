@@ -1,0 +1,54 @@
+{
+  "name": "08_ShimadaKanaya-IC_mod",
+  "aabb": [
+    [
+      138.0498117432594,
+      34.84197799064487
+    ],
+    [
+      138.2221573797367,
+      34.84249375182443
+    ],
+    [
+      138.04955867181025,
+      34.888403475746244
+    ],
+    [
+      138.2220011876844,
+      34.88892012342847
+    ]
+  ],
+  "obb": [
+    [
+      -7882,
+      -2528
+    ],
+    [
+      -7450,
+      -3854
+    ],
+    [
+      8284,
+      1271
+    ],
+    [
+      7852,
+      2597
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      200.970703125,
+      -628.650634765625
+    ],
+    18.04481315612793
+  ],
+  "center": [
+    -33288.74398917445,
+    -125803.33409507625
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/08_ShimadaKanaya-IC_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/08_ShimadaKanaya-IC_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/08_ShimadaKanaya-IC_mod/08_ShimadaKanaya-IC_mod_xodr_road_coordinates.json"
+}

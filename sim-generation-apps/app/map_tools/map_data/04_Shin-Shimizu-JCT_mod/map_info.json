@@ -1,0 +1,54 @@
+{
+  "name": "04_Shin-Shimizu-JCT_mod",
+  "aabb": [
+    [
+      138.39007784749154,
+      35.04264024473837
+    ],
+    [
+      138.48335683239551,
+      35.04268889603235
+    ],
+    [
+      138.38999019051644,
+      35.10797811924493
+    ],
+    [
+      138.4833435603371,
+      35.10802688794904
+    ]
+  ],
+  "obb": [
+    [
+      -4262,
+      -3613
+    ],
+    [
+      -3210,
+      -4845
+    ],
+    [
+      5266,
+      2393
+    ],
+    [
+      4214,
+      3625
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      502.23828125,
+      -610.02880859375
+    ],
+    40.49736404418945
+  ],
+  "center": [
+    -5773.382979150411,
+    -102579.0733621259
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/04_Shin-Shimizu-JCT_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/04_Shin-Shimizu-JCT_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/04_Shin-Shimizu-JCT_mod/04_Shin-Shimizu-JCT_mod_xodr_road_coordinates.json"
+}

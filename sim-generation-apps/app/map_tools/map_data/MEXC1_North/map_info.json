@@ -1,0 +1,54 @@
+{
+  "name": "MEXC1_North",
+  "aabb": [
+    [
+      138.57268133891688,
+      36.33185418133305
+    ],
+    [
+      138.59875747936115,
+      36.33183547992311
+    ],
+    [
+      138.57269424379163,
+      36.3457427840162
+    ],
+    [
+      138.59877501414744,
+      36.345724073164696
+    ]
+  ],
+  "obb": [
+    [
+      -171,
+      2033
+    ],
+    [
+      1692,
+      285
+    ],
+    [
+      2450,
+      1092
+    ],
+    [
+      585,
+      2841
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      1139.388427734375,
+      1563.1083984375
+    ],
+    46.82976531982422
+  ],
+  "center": [
+    -6685.0,
+    -36270.0
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/MEXC1_North_C.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/MEXC1_North_C.fbx",
+  "road_coordinates_path": "map_tools/map_data/MEXC1_North/xodr_road_coordinates.json"
+}

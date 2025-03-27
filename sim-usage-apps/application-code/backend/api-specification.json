@@ -1,0 +1,680 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "catalogap",
+    "description": "catalogap",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Generated server url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "ScenarioList",
+      "description": "シナリオ情報一覧検索APIコントローラー"
+    },
+    {
+      "name": "ScenarioDataDownload",
+      "description": "シナリオデータダウンロードAPIコントローラー"
+    },
+    {
+      "name": "ScenarioCode",
+      "description": "シナリオコードを取得するAPIコントローラー"
+    },
+    {
+      "name": "FrontEndLog",
+      "description": "フロントエンドログ出力APIコントローラー"
+    }
+  ],
+  "paths": {
+    "/api/frontendlog/upload": {
+      "post": {
+        "tags": [
+          "FrontEndLog"
+        ],
+        "summary": "フロントエンドのログデータをアップロードする.",
+        "description": "フロントエンドのログデータをアップロードする.",
+        "operationId": "uploadFrontendLog",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UploadFrontendLogRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "500": {
+            "description": "想定外例外",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "200": {
+            "description": "成功"
+          }
+        }
+      }
+    },
+    "/api/scenario/list": {
+      "get": {
+        "tags": [
+          "ScenarioList"
+        ],
+        "summary": "引数をもとにシナリオ検索画面の検索結果一覧に使用するデータを取得する.",
+        "description": "引数をもとにシナリオ検索画面の検索結果一覧に使用するデータを取得する.",
+        "operationId": "getScenarioList",
+        "parameters": [
+          {
+            "name": "getScenarioListRequest",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/GetScenarioListRequest"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "業務エラー(AWS CloudFront 署名のURL生成に失敗エーラ)",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "500": {
+            "description": "想定外例外",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetScenarioListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scenario/download": {
+      "get": {
+        "tags": [
+          "ScenarioDataDownload"
+        ],
+        "summary": "引数をもとにシナリオのデータおよび機械学習用の画像のデータをダウンロードする.",
+        "description": "引数をもとにシナリオのデータおよび機械学習用の画像のデータをダウンロードする.",
+        "operationId": "downloadScenarioData",
+        "parameters": [
+          {
+            "name": "downloadScenarioDataRequest",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/DownloadScenarioDataRequest"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "業務エラー（AWS CloudFront 署名のURL生成に失敗エーラ)",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "500": {
+            "description": "想定外例外",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DownloadScenarioDataResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scenario/detail": {
+      "get": {
+        "tags": [
+          "ScenarioList"
+        ],
+        "summary": "引数をもとにシナリオ詳細画面に使用するデータを取得する.",
+        "description": "引数をもとにシナリオ詳細画面に使用するデータを取得する.",
+        "operationId": "getScenarioDetail",
+        "parameters": [
+          {
+            "name": "getScenarioDetailRequest",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/GetScenarioDetailRequest"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetScenarioDetailResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "業務エラー（AWS CloudFront 署名のURL生成に失敗エーラ)",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "500": {
+            "description": "想定外例外",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "404": {
+            "description": "業務エラー(UUIDが存在しないまたはログインユーザの権限がない)",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/codes/locationList": {
+      "get": {
+        "tags": [
+          "ScenarioCode"
+        ],
+        "summary": "場所マスタテーブルから引数をもとにシナリオ検索画面の検索条件に使用するデータを取得する.",
+        "description": "場所マスタテーブルから引数をもとにシナリオ検索画面の検索条件に使用するデータを取得する.",
+        "operationId": "getLocationList",
+        "parameters": [
+          {
+            "name": "getLocationListRequest",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/GetLocationListRequest"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "業務エラー（発生場所が不足の場合)",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "500": {
+            "description": "想定外例外",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetLocationListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/codes/list": {
+      "get": {
+        "tags": [
+          "ScenarioCode"
+        ],
+        "summary": "シナリオの属性管理テーブルから引数をもとにシナリオ検索画面の検索条件に使用するデータを取得する.",
+        "description": "シナリオの属性管理テーブルから引数をもとにシナリオ検索画面の検索条件に使用するデータを取得する.",
+        "operationId": "getCodeList",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "想定外例外",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "400": {
+            "description": "ヒヤリハット種別または発生区間が不足の場合",
+            "content": {
+              "application/json": {
+
+              }
+            }
+          },
+          "200": {
+            "description": "成功",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCodeListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "UploadFrontendLogRequest": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "fileName": {
+            "type": "string"
+          },
+          "functionName": {
+            "type": "string"
+          }
+        }
+      },
+      "GetScenarioListRequest": {
+        "required": [
+          "itemsPerPage",
+          "requestPage"
+        ],
+        "type": "object",
+        "properties": {
+          "nearmissType": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "happenTime": {
+            "type": "string"
+          },
+          "happenSection": {
+            "type": "string"
+          },
+          "happenLocation": {
+            "type": "string"
+          },
+          "requestPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemsPerPage": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "GetScenarioListInfo": {
+        "type": "object",
+        "properties": {
+          "counts": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lists": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ScenarioInfo"
+            }
+          }
+        }
+      },
+      "GetScenarioListResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "$ref": "#/components/schemas/GetScenarioListInfo"
+          }
+        }
+      },
+      "NearmissTypeInfo": {
+        "type": "object",
+        "properties": {
+          "nearmissType": {
+            "type": "string"
+          }
+        }
+      },
+      "ScenarioInfo": {
+        "type": "object",
+        "properties": {
+          "nearmissTypeList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NearmissTypeInfo"
+            }
+          },
+          "videoThumbnailUrl": {
+            "type": "string"
+          },
+          "sectionName": {
+            "type": "string"
+          },
+          "locationName": {
+            "type": "string"
+          },
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "DownloadScenarioDataRequest": {
+        "required": [
+          "dataDivision",
+          "uuid"
+        ],
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string"
+          },
+          "dataDivision": {
+            "type": "string"
+          }
+        }
+      },
+      "DownloadScenarioDataResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "$ref": "#/components/schemas/ScenarioDownloadData"
+          }
+        }
+      },
+      "ScenarioDownloadData": {
+        "type": "object",
+        "properties": {
+          "downloadUrl": {
+            "type": "string"
+          }
+        }
+      },
+      "GetScenarioDetailRequest": {
+        "required": [
+          "uuid"
+        ],
+        "type": "object",
+        "properties": {
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "GetScenarioDetailResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "$ref": "#/components/schemas/ScenarioDetailInfo"
+          }
+        }
+      },
+      "MachineLearningData": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "dataDivision": {
+            "type": "string"
+          },
+          "size": {
+            "type": "string"
+          }
+        }
+      },
+      "ScenarioData": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "dataDivision": {
+            "type": "string"
+          },
+          "size": {
+            "type": "string"
+          }
+        }
+      },
+      "ScenarioDetailInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nearmissTypeList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NearmissTypeInfo"
+            }
+          },
+          "videoUrl": {
+            "type": "string"
+          },
+          "videoThumbnailUrl": {
+            "type": "string"
+          },
+          "scenarioCreateTime": {
+            "type": "string"
+          },
+          "sectionName": {
+            "type": "string"
+          },
+          "locationName": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "string"
+          },
+          "longitude": {
+            "type": "string"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "scenarioDataList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ScenarioData"
+            }
+          },
+          "machineLearningDataList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MachineLearningData"
+            }
+          }
+        }
+      },
+      "GetLocationListRequest": {
+        "required": [
+          "sectionId"
+        ],
+        "type": "object",
+        "properties": {
+          "sectionId": {
+            "type": "string"
+          }
+        }
+      },
+      "GetLocationListInfo": {
+        "type": "object",
+        "properties": {
+          "happenLocation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LocationData"
+            }
+          }
+        }
+      },
+      "GetLocationListResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "$ref": "#/components/schemas/GetLocationListInfo"
+          }
+        }
+      },
+      "LocationData": {
+        "type": "object",
+        "properties": {
+          "locationId": {
+            "type": "string"
+          },
+          "locationName": {
+            "type": "string"
+          }
+        }
+      },
+      "GetCodeListInfo": {
+        "type": "object",
+        "properties": {
+          "nearmissType": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NearMissInfo"
+            }
+          },
+          "happenSection": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HappenSectionInfo"
+            }
+          }
+        }
+      },
+      "GetCodeListResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "$ref": "#/components/schemas/GetCodeListInfo"
+          }
+        }
+      },
+      "HappenSectionInfo": {
+        "type": "object",
+        "properties": {
+          "sectionId": {
+            "type": "string"
+          },
+          "sectionName": {
+            "type": "string"
+          }
+        }
+      },
+      "NearMissInfo": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "E1_AshigaraSA",
+  "aabb": [
+    [
+      138.94223722000555,
+      35.29137127646671
+    ],
+    [
+      138.97244921043756,
+      35.29125704342982
+    ],
+    [
+      138.94246734617917,
+      35.33363792635705
+    ],
+    [
+      138.97269505658863,
+      35.333523515593676
+    ]
+  ],
+  "obb": [
+    [
+      -2363,
+      -2788
+    ],
+    [
+      -1759,
+      -3135
+    ],
+    [
+      933,
+      1551
+    ],
+    [
+      329,
+      1899
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -715.1654052734375,
+      -618.27978515625
+    ],
+    60.11940002441406
+  ],
+  "center": [
+    42585.508,
+    -75734.547
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/E1_AshigaraSA_C.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/E1_AshigaraSA_C.fbx",
+  "road_coordinates_path": "map_tools/map_data/E1_AshigaraSA/xodr_road_coordinates.json"
+}

@@ -1,0 +1,54 @@
+{
+  "name": "11_Shin-Iwata-Smart-IC_Hamamatsu-Hamakita-IC_mod",
+  "aabb": [
+    [
+      137.76729563730663,
+      34.82351942862586
+    ],
+    [
+      137.88870944611372,
+      34.8241900477206
+    ],
+    [
+      137.76715643897916,
+      34.83923126163456
+    ],
+    [
+      137.88859330999153,
+      34.83990227078235
+    ]
+  ],
+  "obb": [
+    [
+      -5610,
+      279
+    ],
+    [
+      5434,
+      -1214
+    ],
+    [
+      5555,
+      -320
+    ],
+    [
+      -5489,
+      1173
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -27.59130859375,
+      -20.6502685546875
+    ],
+    82.29698944091797
+  ],
+  "center": [
+    -61472.46988976451,
+    -129403.5507529502
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/11_Shin-Iwata-Smart-IC_Hamamatsu-Hamakita-IC_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/11_Shin-Iwata-Smart-IC_Hamamatsu-Hamakita-IC_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/11_Shin-Iwata-Smart-IC_Hamamatsu-Hamakita-IC_mod/11_Shin-Iwata-Smart-IC_Hamamatsu-Hamakita-IC_mod_xodr_road_coordinates.json"
+}

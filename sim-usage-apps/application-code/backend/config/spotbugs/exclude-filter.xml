@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+  <!-- 
+    Lombokによる自動作成された各メソッドで発生している警告であるが
+    spotBugsとの整合性が取れない警告であるため警告を無視する設定としている。
+  -->
+  <Match>
+    <Or>
+      <Bug code="EI, EI2" />
+    </Or>
+  </Match>
+  <Match>
+    <!-- 
+      ApplicationContextWrapperクラスのsetApplicationContextメソッドで発生している警告であるが
+      このメソッドはSpringフレームワークによって自動的に呼び出されるため静的フィールドへの書き込み警告を無視する設定としている。
+    -->
+    <Class name="com.catalogap.systemcommon.util.ApplicationContextWrapper"/>
+    <Method name="setApplicationContext"/>
+      <Bug pattern="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" />
+  </Match>
+  <Match>
+    <!-- 
+      ErrorResponseクラスのコンストラクタで発生している警告であるが
+      このクラスの設計は例外処理のためのレスポンス生成であるためコンストラクタ内で例外をスローする警告を無視する設定としている。
+    -->
+    <Class name="com.catalogap.systemcommon.exception.response.ErrorResponse"/>
+      <Bug pattern="CT_CONSTRUCTOR_THROW" />
+  </Match>
+</FindBugsFilter>

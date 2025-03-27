@@ -1,0 +1,54 @@
+{
+  "name": "07_FujiedaOkabe-IC_Fujieda-PA_mod",
+  "aabb": [
+    [
+      138.22165687982024,
+      34.888381815171684
+    ],
+    [
+      138.26960900398248,
+      34.888482149691505
+    ],
+    [
+      138.22154110910765,
+      34.92268301464679
+    ],
+    [
+      138.2695131774286,
+      34.92278347648961
+    ]
+  ],
+  "obb": [
+    [
+      -2201,
+      -1853
+    ],
+    [
+      -1938,
+      -2159
+    ],
+    [
+      2432,
+      1597
+    ],
+    [
+      2169,
+      1903
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      115.3699951171875,
+      -128.1748046875
+    ],
+    40.67224884033203
+  ],
+  "center": [
+    -23250.380549238347,
+    -121381.96010480568
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/07_FujiedaOkabe-IC_Fujieda-PA_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/07_FujiedaOkabe-IC_Fujieda-PA_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/07_FujiedaOkabe-IC_Fujieda-PA_mod/07_FujiedaOkabe-IC_Fujieda-PA_mod_xodr_road_coordinates.json"
+}

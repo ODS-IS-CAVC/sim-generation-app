@@ -1,0 +1,16 @@
+{
+  "codesList": {
+    "101": "Confluence (Branch)",
+    "102": "Cut-in",
+    "103": "Cut-out",
+    "104": "Traffic jam",
+    "105": "Poor visibility (poor road surface)",
+    "106": "Blind",
+    "107": "Lane change",
+    "108": "Curve",
+    "109": "Lane departure",
+    "110": "Falling objects",
+    "111": "Broken down vehicle (stopped vehicle)",
+    "112": "Motorcycle passing"
+  }
+}

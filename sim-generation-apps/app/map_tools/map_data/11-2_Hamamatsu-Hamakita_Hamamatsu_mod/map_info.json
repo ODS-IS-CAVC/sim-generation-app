@@ -1,0 +1,54 @@
+{
+  "name": "11-2_Hamamatsu-Hamakita_Hamamatsu_mod",
+  "aabb": [
+    [
+      137.72939840219638,
+      34.83731948535387
+    ],
+    [
+      137.7847955192639,
+      34.837657814801545
+    ],
+    [
+      137.72930143869138,
+      34.84772181711928
+    ],
+    [
+      137.78470552478052,
+      34.848060276818735
+    ]
+  ],
+  "obb": [
+    [
+      -2614,
+      137
+    ],
+    [
+      2451,
+      -849
+    ],
+    [
+      2538,
+      -405
+    ],
+    [
+      -2527,
+      581
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -38.002685546875,
+      -133.745361328125
+    ],
+    78.97525024414062
+  ],
+  "center": [
+    -67946.44834821322,
+    -128141.73927654381
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/11-2_Hamamatsu-Hamakita_Hamamatsu_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/11-2_Hamamatsu-Hamakita_Hamamatsu_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/11-2_Hamamatsu-Hamakita_Hamamatsu_mod/11-2_Hamamatsu-Hamakita_Hamamatsu_mod_xodr_road_coordinates.json"
+}

@@ -1,0 +1,54 @@
+{
+  "name": "00-2_NagaizumiNumazu_Suruga-Bay-Numazu_mod",
+  "aabb": [
+    [
+      138.79953956283435,
+      36.8371734991907
+    ],
+    [
+      138.88321118322494,
+      36.836933251342614
+    ],
+    [
+      138.79957879073126,
+      36.847230714419844
+    ],
+    [
+      138.88326136822965,
+      36.84699037921813
+    ]
+  ],
+  "obb": [
+    [
+      -3736,
+      -164
+    ],
+    [
+      -3636,
+      -1187
+    ],
+    [
+      3829,
+      -455
+    ],
+    [
+      3729,
+      567
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      46.322998046875,
+      -309.985107421875
+    ],
+    5.598047256469727
+  ],
+  "center": [
+    30447.625029144034,
+    93481.0320162424
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/00-2_NagaizumiNumazu_Suruga-Bay-Numazu_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/00-2_NagaizumiNumazu_Suruga-Bay-Numazu_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/00-2_NagaizumiNumazu_Suruga-Bay-Numazu_mod/00-2_NagaizumiNumazu_Suruga-Bay-Numazu_mod_xodr_road_coordinates.json"
+}

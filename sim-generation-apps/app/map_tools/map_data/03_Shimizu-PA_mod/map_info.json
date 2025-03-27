@@ -1,0 +1,54 @@
+{
+  "name": "03_Shimizu-PA_mod",
+  "aabb": [
+    [
+      138.4828646513421,
+      35.107329472571244
+    ],
+    [
+      138.59045601489643,
+      35.10729693760901
+    ],
+    [
+      138.4828522258297,
+      35.166609033636774
+    ],
+    [
+      138.59052160799035,
+      35.166576427502136
+    ]
+  ],
+  "obb": [
+    [
+      -5834,
+      -1840
+    ],
+    [
+      -4867,
+      -3287
+    ],
+    [
+      4918,
+      3259
+    ],
+    [
+      3950,
+      4706
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -458.302734375,
+      709.409423828125
+    ],
+    33.78379821777344
+  ],
+  "center": [
+    3344.9468889845507,
+    -95746.43126068823
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/03_Shimizu-PA_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/03_Shimizu-PA_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/03_Shimizu-PA_mod/03_Shimizu-PA_mod_xodr_road_coordinates.json"
+}

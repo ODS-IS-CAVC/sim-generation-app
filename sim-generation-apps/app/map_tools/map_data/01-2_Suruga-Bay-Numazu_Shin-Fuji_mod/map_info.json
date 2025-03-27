@@ -1,0 +1,54 @@
+{
+  "name": "01-2_Suruga-Bay-Numazu_Shin-Fuji_mod",
+  "aabb": [
+    [
+      138.68505160496971,
+      35.16973003654092
+    ],
+    [
+      138.74918535974004,
+      35.169615089490165
+    ],
+    [
+      138.68512207762777,
+      35.200811732597685
+    ],
+    [
+      138.74928025573013,
+      35.20069665385247
+    ]
+  ],
+  "obb": [
+    [
+      -2922,
+      1703
+    ],
+    [
+      2911,
+      -1723
+    ],
+    [
+      3141,
+      -1332
+    ],
+    [
+      -2692,
+      2094
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      109.56396484375,
+      185.439697265625
+    ],
+    59.5705680847168
+  ],
+  "center": [
+    19776.389477384975,
+    -90371.66567123203
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/01-2_Suruga-Bay-Numazu_Shin-Fuji_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/01-2_Suruga-Bay-Numazu_Shin-Fuji_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/01-2_Suruga-Bay-Numazu_Shin-Fuji_mod/01-2_Suruga-Bay-Numazu_Shin-Fuji_mod_xodr_road_coordinates.json"
+}

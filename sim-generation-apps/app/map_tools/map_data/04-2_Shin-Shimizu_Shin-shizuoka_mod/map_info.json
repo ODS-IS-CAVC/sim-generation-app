@@ -1,0 +1,54 @@
+{
+  "name": "04-2_Shin-Shimizu_Shin-shizuoka_mod",
+  "aabb": [
+    [
+      138.36391313206784,
+      35.03451688849028
+    ],
+    [
+      138.44634337344607,
+      35.03458133587925
+    ],
+    [
+      138.36386327159198,
+      35.06457168797404
+    ],
+    [
+      138.44632371428662,
+      35.06463620688268
+    ]
+  ],
+  "obb": [
+    [
+      -3866,
+      -1394
+    ],
+    [
+      -3627,
+      -1988
+    ],
+    [
+      3978,
+      1073
+    ],
+    [
+      3739,
+      1667
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      55.79248046875,
+      -160.5885009765625
+    ],
+    21.929325103759766
+  ],
+  "center": [
+    -8654.664219567821,
+    -105435.25718302323
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/04-2_Shin-Shimizu_Shin-shizuoka_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/04-2_Shin-Shimizu_Shin-shizuoka_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/04-2_Shin-Shimizu_Shin-shizuoka_mod/04-2_Shin-Shimizu_Shin-shizuoka_mod_xodr_road_coordinates.json"
+}

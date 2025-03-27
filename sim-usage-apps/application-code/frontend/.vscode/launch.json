@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome against localhost",
+      "url": "http://localhost:5050", // ここに Vue アプリが起動するURLを記入
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "npm-run-dev", // デバッグ開始前に実行するタスクを指定
+      "runtimeExecutable": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe", // Chrome のパス
+      "runtimeArgs": [
+        "--user-data-dir=${workspaceFolder}/.vscode/chrome" // 新しいユーザーディレクトリを指定
+      ],
+      "sourceMaps": true,
+      "port": 9222
+    }
+  ]
+}

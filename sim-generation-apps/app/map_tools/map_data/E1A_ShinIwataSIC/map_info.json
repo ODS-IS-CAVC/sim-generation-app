@@ -1,0 +1,54 @@
+{
+  "name": "E1A_ShinIwataSIC",
+  "aabb": [
+    [
+      139.14672469750383,
+      37.17041708999352
+    ],
+    [
+      139.16490966070566,
+      37.170316445471876
+    ],
+    [
+      139.1467504254717,
+      37.17343573735292
+    ],
+    [
+      139.16493611197868,
+      37.17333508188561
+    ]
+  ],
+  "obb": [
+    [
+      -1047,
+      78
+    ],
+    [
+      524,
+      -245
+    ],
+    [
+      588,
+      66
+    ],
+    [
+      -983,
+      391
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -229.54302978515625,
+      72.90342712402344
+    ],
+    78.32894134521484
+  ],
+  "center": [
+    -58458.908,
+    -130171.916
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/E1A_ShinIwataSIC_C.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/E1A_ShinIwataSIC_C.fbx",
+  "road_coordinates_path": "map_tools/map_data/E1A_ShinIwataSIC/xodr_road_coordinates.json"
+}

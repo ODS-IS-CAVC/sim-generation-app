@@ -1,0 +1,54 @@
+{
+  "name": "09-2_Kakegawa_MoriKakegawa_mod",
+  "aabb": [
+    [
+      137.92735563461233,
+      34.82244936447323
+    ],
+    [
+      138.0055698269707,
+      34.82279235025955
+    ],
+    [
+      137.92720563243566,
+      34.84411128540834
+    ],
+    [
+      138.00544031053047,
+      34.84445454625584
+    ]
+  ],
+  "obb": [
+    [
+      -3586,
+      -1174
+    ],
+    [
+      -3462,
+      -1520
+    ],
+    [
+      3638,
+      1026
+    ],
+    [
+      3514,
+      1371
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      26.322509765625,
+      -74.186767578125
+    ],
+    19.727462768554688
+  ],
+  "center": [
+    -48805.39026907884,
+    -129283.50016673484
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/09-2_Kakegawa_MoriKakegawa_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/09-2_Kakegawa_MoriKakegawa_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/09-2_Kakegawa_MoriKakegawa_mod/09-2_Kakegawa_MoriKakegawa_mod_xodr_road_coordinates.json"
+}

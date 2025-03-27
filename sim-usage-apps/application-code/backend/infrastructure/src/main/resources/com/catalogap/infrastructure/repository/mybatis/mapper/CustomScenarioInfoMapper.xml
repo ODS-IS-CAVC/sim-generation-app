@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catalogap.infrastructure.repository.mybatis.mapper.CustomScenarioInfoMapper">
+  <select id="getScenarioList">
+        WITH selected_uuids AS (	
+	    SELECT DISTINCT t2.uuid	
+	      FROM nearmiss_info t2	
+	     WHERE t2.delete_flag = '0'	
+    <!-- ヒヤリハット種別が""でない場合 -->
+    <if test="nearmissType !=null and nearmissType.size() > 0">
+     AND t2.nearmiss_type IN  
+      <foreach collection="nearmissType" item="item" index="index" open="(" close=")" separator=",">
+		    #{item} 
+      </foreach>
+    </if>
+	    )	
+      SELECT t1.uuid, t1.location_id, string_agg(t2.nearmiss_type,',' ORDER BY t2.nearmiss_type) as new_nearmiss_type, t3.location_name, t3.section_id,  t4.section_name 
+        FROM scenario_info t1 
+       INNER JOIN nearmiss_info t2 
+          ON t1.uuid = t2.uuid 
+       INNER JOIN location_master t3 
+          ON t1.location_id = t3.location_id 
+       INNER JOIN section_master t4 
+          ON t3.section_id = t4.section_id 
+       INNER JOIN search_auth t5 
+          ON t4.section_id = t5.section_id 
+       WHERE t1.delete_flag = '0' 
+         AND t2.delete_flag = '0' 
+         AND t3.delete_flag = '0' 
+         AND t4.delete_flag = '0' 
+         AND t5.delete_flag = '0' 
+         AND t5.email_address = #{userId}
+         AND t1.uuid IN (SELECT uuid FROM selected_uuids) 
+    <!-- 発生日時が""でない場合 -->
+    <if test="happenTime !=null and model !=''">
+     AND t1.scenario_create_time &gt;= (TO_TIMESTAMP( #{happenTime},'YYYY/MM/DD HH24:MI'))
+    </if>
+    <!-- 発生場所が""でない場合 -->
+    <if test="happenLocation !=null and name !=''">
+     AND t1.location_id = #{happenLocation} 
+    </if>
+    <!-- 発生区間が""でない場合 -->
+    <if test="happenSection !=null and name !=''">
+     AND t3.section_id = #{happenSection}  
+    </if>
+    GROUP BY t1.uuid,t1.location_id,t3.location_name,t3.section_id,t4.section_name 
+    ORDER BY t1.uuid 
+    OFFSET #{skipRows} ROWS limit #{itemsPerPage} 
+ </select>
+ <select id="getScenarioCount">
+       SELECT COUNT(*) 
+        FROM(
+       SELECT t1.uuid  
+         FROM scenario_info t1 
+        INNER JOIN nearmiss_info t2
+           ON t1.uuid = t2.uuid 
+        INNER JOIN location_master t3 
+           ON t1.location_id = t3.location_id
+        INNER JOIN section_master t4 
+           ON t3.section_id = t4.section_id 
+        INNER JOIN search_auth t5
+           ON t4.section_id = t5.section_id
+        WHERE t1.delete_flag = '0' 
+          AND t2.delete_flag = '0' 
+          AND t3.delete_flag = '0' 
+          AND t4.delete_flag = '0' 
+          AND t5.delete_flag = '0'
+       <!-- 発生日時が""でない場合 -->
+    <if test="happenTime !=null and model !=''">
+     AND t1.scenario_create_time &gt;= (TO_TIMESTAMP(#{happenTime},'YYYY/MM/DD HH24:MI'))
+    </if>
+    <!-- 発生場所が""でない場合 -->
+    <if test="happenLocation !=null and name !=''">
+     AND t1.location_id = #{happenLocation} 
+    </if>
+    <!-- 発生区間が""でない場合 -->
+    <if test="happenSection !=null and name !=''">
+     AND t3.section_id = #{happenSection}  
+    </if>
+    <!-- ユーザIDが""でない場合 -->
+    <if test="userId !=null and name !=''">
+     AND t5.email_address = #{userId}   
+    </if>
+    <!-- ヒヤリハット種別が""でない場合 -->
+    <if test="nearmissType !=null and nearmissType.size() &gt;0">
+     AND t2.nearmiss_type IN  
+      <foreach collection="nearmissType" item="item" index="index" open="(" close=")" separator=",">
+		    #{item} 
+      </foreach>
+    </if> 
+    GROUP BY t1.uuid,t1.location_id,t3.location_name,t3.section_id,t4.section_name )
+ </select>
+ <select id="getScenarioDetailInfo">
+   SELECT t1.id, t1.uuid, string_agg(t4.nearmiss_type,',') as new_nearmiss_type, t1.scenario_create_Time, t1.latitude, t1.longitude, t2.section_id, t2.location_name, t3.section_name 
+     FROM scenario_info AS t1  
+    INNER JOIN location_master AS t2 
+       ON t2.location_id = t1.location_id  
+    INNER JOIN section_master AS t3 
+       ON t3.section_id = t2.section_id 
+    INNER JOIN nearmiss_info AS t4  
+       ON t4.uuid = t1.uuid 
+    WHERE t1.uuid = #{uuid}   
+      AND t1.delete_flag = '0' 
+      AND t2.delete_flag = '0' 
+      AND t3.delete_flag = '0' 
+      AND t4.delete_flag = '0'  
+    GROUP BY t1.id, t1.uuid, t1.scenario_create_Time, t1.latitude, t1.longitude, t2.section_id, t2.location_name, t3.section_name
+ </select>
+</mapper>

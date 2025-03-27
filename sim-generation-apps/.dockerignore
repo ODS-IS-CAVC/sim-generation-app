@@ -1,0 +1,16 @@
+efs/
+.devcontainer/
+.vscode/
+**/.git/
+**/.gitkeep
+**/.gitignore
+**/readme.md
+**/README.md
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.log
+**/*.tmp
+**/*.dll
+
+Dockerfile

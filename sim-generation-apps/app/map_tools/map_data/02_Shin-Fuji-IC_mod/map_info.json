@@ -1,0 +1,54 @@
+{
+  "name": "02_Shin-Fuji-IC_mod",
+  "aabb": [
+    [
+      138.58967748546365,
+      35.16574646043931
+    ],
+    [
+      138.73104628023205,
+      35.165559329019295
+    ],
+    [
+      138.58971840225465,
+      35.20298515526851
+    ],
+    [
+      138.73115169783165,
+      35.20279776695095
+    ]
+  ],
+  "obb": [
+    [
+      -6845,
+      1175
+    ],
+    [
+      -6435,
+      -2070
+    ],
+    [
+      6442,
+      -443
+    ],
+    [
+      6032,
+      2802
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -201.56787109375,
+      366.11279296875
+    ],
+    7.20098876953125
+  ],
+  "center": [
+    14606.13563320297,
+    -90477.57128566947
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/02_Shin-Fuji-IC_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/02_Shin-Fuji-IC_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/02_Shin-Fuji-IC_mod/02_Shin-Fuji-IC_mod_xodr_road_coordinates.json"
+}

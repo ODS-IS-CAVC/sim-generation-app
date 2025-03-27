@@ -1,0 +1,54 @@
+{
+  "name": "06_Shizuoka-SA_mod",
+  "aabb": [
+    [
+      138.269243220207,
+      34.92256024528927
+    ],
+    [
+      138.29652920547292,
+      34.9226089977626
+    ],
+    [
+      138.26906587024376,
+      34.98581661217022
+    ],
+    [
+      138.29637282599455,
+      34.98586547872272
+    ]
+  ],
+  "obb": [
+    [
+      -1250,
+      -3498
+    ],
+    [
+      -942,
+      -3607
+    ],
+    [
+      1535,
+      3398
+    ],
+    [
+      1226,
+      3507
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      142.1302490234375,
+      -49.9150390625
+    ],
+    70.52474975585938
+  ],
+  "center": [
+    -19836.10227415357,
+    -115995.66594569809
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/06_Shizuoka-SA_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/06_Shizuoka-SA_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/06_Shizuoka-SA_mod/06_Shizuoka-SA_mod_xodr_road_coordinates.json"
+}

@@ -1,0 +1,17 @@
+// Vuetify の Sass 変数を上書きする場合は以下を参照してください。
+// see: https://vuetifyjs.com/en/features/sass-variables/#component-specific-variables
+@use 'vuetify/settings' with (
+  $button-height: 36px,
+  $breadcrumbs-item-disabled-opacity: true,
+  $border-radius-root: 0,
+  $button-font-size: 14px,
+  $button-text-transform: none,
+  $label-color: #000000ff,
+  $label-font-size: 14px,
+  $body-font-family: 'Yu Gothic Medium',
+  $list-item-title-font-size: 14px,
+  $field-font-size: 14px,
+  $card-title-font-size: 14px,
+  $chip-font-size: 12px,
+  $label-opacity: var(1)
+);

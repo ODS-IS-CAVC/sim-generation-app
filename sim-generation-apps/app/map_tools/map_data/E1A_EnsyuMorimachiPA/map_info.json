@@ -1,0 +1,54 @@
+{
+  "name": "E1A_EnsyuMorimachiPA",
+  "aabb": [
+    [
+      137.89141456234853,
+      34.82223213794323
+    ],
+    [
+      137.92519213717037,
+      34.822396406529265
+    ],
+    [
+      137.89136562147596,
+      34.82888482809094
+    ],
+    [
+      137.92514591222806,
+      34.829049137128074
+    ]
+  ],
+  "obb": [
+    [
+      -1941,
+      440
+    ],
+    [
+      1139,
+      -300
+    ],
+    [
+      1185,
+      -106
+    ],
+    [
+      -1894,
+      634
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -377.77001953125,
+      167.15618896484375
+    ],
+    76.48155975341797
+  ],
+  "center": [
+    -53766.335,
+    -130357.243
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/E1A_EnsyuMorimachiPA_C.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/E1A_EnsyuMorimachiPA.fbx",
+  "road_coordinates_path": "map_tools/map_data/E1A_EnsyuMorimachiPA/xodr_road_coordinates.json"
+}

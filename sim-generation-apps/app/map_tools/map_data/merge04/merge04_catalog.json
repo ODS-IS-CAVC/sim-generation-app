@@ -1,0 +1,22 @@
+{
+    "catalog_info": {
+        "creator": "BIPROGY",
+        "version": "2024a",
+        "date": "2024/12/23"
+    },
+    "map": {
+        "target_epsg": 6676,
+        "target_origin": {
+            "latitude": 0.6222326321934364,
+            "longitude": 2.4380502619412767
+        },
+        "target_origin_degree": {
+            "latitude_degree": 35.65130369999998,
+            "longitude_degree": 139.68999025
+        },
+        "map_origin_by_offset": {
+            "north": 107755.97814316707,
+            "east": -38033.730511897076
+        }
+    }
+}

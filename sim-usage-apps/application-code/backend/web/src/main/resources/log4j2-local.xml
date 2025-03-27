@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+    <properties>
+        <property name="LOG_HOME">./log</property>
+        <property name="FILE_FOLDER_NAME_BACKEND">backend</property>
+        <property name="FILE_FOLDER_NAME_TOMCAT">tomcat</property>
+        <property name="FILE_NAME_APPLICATION_ID">D51201A</property>
+        <property name="FILE_NAME_APPLICATION">application</property>
+        <property name="FILE_NAME_SQL">sql</property>
+        <property name="FILE_NAME_TOMCAT">tomcat</property>
+        <property name="LOG_HOME">./log</property>		
+        <property name="FILE_FOLDER_NAME_FRONTEND">frontend</property>		
+        <property name="FILE_NAME_FRONTEND_APP">frontend-app</property>		
+    </properties>
+    <Appenders>
+        <Console name="console" Target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %c %-5p %t %m%n"/>
+        </Console>
+
+        <RollingFile name="application.log.appender" 
+                 fileName="${LOG_HOME}/${FILE_FOLDER_NAME_BACKEND}/${FILE_NAME_APPLICATION}_${FILE_NAME_APPLICATION_ID}.log" 
+                 filePattern="${LOG_HOME}/${FILE_FOLDER_NAME_BACKEND}/${FILE_NAME_APPLICATION}_${FILE_NAME_APPLICATION_ID}.%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout 
+                 pattern="[%-5level] [%date{yyyy/MM/dd HH:mm:ss.SSS}] [%X{Slf4jMDCFilter.UUID}][%t - %tid] %C.%M:%L - %m%n"/>
+            <TimeBasedTriggeringPolicy/>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${LOG_HOME}/${FILE_FOLDER_NAME_BACKEND}" maxDepth="1">
+                    <IfFileName glob="${FILE_NAME_APPLICATION}_${FILE_NAME_APPLICATION_ID}.*.log.gz"/>
+                    <IfLastModified age="30d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="sql.log.appender" 
+                fileName="${LOG_HOME}/${FILE_FOLDER_NAME_BACKEND}/${FILE_NAME_SQL}_${FILE_NAME_APPLICATION_ID}.log" 
+                filePattern="${LOG_HOME}/${FILE_FOLDER_NAME_BACKEND}/${FILE_NAME_SQL}_${FILE_NAME_APPLICATION_ID}.%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout 
+                pattern="[%-5level] [%date{yyyy/MM/dd HH:mm:ss.SSS}] [%X{Slf4jMDCFilter.UUID}][%t - %tid] %C.%M:%L - %m%n"/>
+            <TimeBasedTriggeringPolicy/>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${LOG_HOME}/${FILE_FOLDER_NAME_BACKEND}" maxDepth="1">
+                    <IfFileName glob="${FILE_NAME_SQL}_${FILE_NAME_APPLICATION_ID}.*.log.gz"/>
+                    <IfLastModified age="30d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="tomcat.log.appender" 
+                fileName="${LOG_HOME}/${FILE_FOLDER_NAME_TOMCAT}/${FILE_NAME_TOMCAT}_${FILE_NAME_APPLICATION_ID}.log" 
+                filePattern="${LOG_HOME}/${FILE_FOLDER_NAME_TOMCAT}/${FILE_NAME_TOMCAT}_${FILE_NAME_APPLICATION_ID}.%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout 
+                pattern="[%-5level] [%date{yyyy/MM/dd HH:mm:ss.SSS}] [%X{Slf4jMDCFilter.UUID}][%t - %tid] %C.%M:%L - %m%n"/>
+            <TimeBasedTriggeringPolicy/>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${LOG_HOME}/${FILE_FOLDER_NAME_TOMCAT}" maxDepth="1">
+                    <IfFileName glob="${FILE_NAME_TOMCAT}_${FILE_NAME_APPLICATION_ID}.*.log.gz"/>
+                    <IfLastModified age="30d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="front.log.appender" 
+                 fileName="${LOG_HOME}/${FILE_FOLDER_NAME_FRONTEND}/${FILE_NAME_FRONTEND_APP}.log" 							
+                 filePattern="${LOG_HOME}/${FILE_FOLDER_NAME_FRONTEND}/${FILE_NAME_FRONTEND_APP}.%d{yyyy-MM-dd}.log.gz">							
+            <PatternLayout 
+                pattern="[%-5level] [%date{yyyy/MM/dd HH:mm:ss.SSS}] [%X{Slf4jMDCFilter.UUID}][%t - %tid] %C.%M:%L - %m%n"/>							
+            <TimeBasedTriggeringPolicy/>							
+            <DefaultRolloverStrategy>							
+                <Delete basePath="${LOG_HOME}/${FILE_FOLDER_NAME_FRONTEND}" maxDepth="1">							
+                    <IfFileName glob="${FILE_NAME_FRONTEND_APP}.*.log.gz"/>							
+                    <IfLastModified age="30d"/>							
+                </Delete>							
+            </DefaultRolloverStrategy>							
+         </RollingFile>							
+
+    </Appenders>
+    <Loggers>
+        <Logger name="application.log" level="debug" additivity="true">
+            <AppenderRef ref="application.log.appender"/>
+        </Logger>
+        <Logger name="org.apache.coyote" level="debug" additivity="true">
+            <AppenderRef ref="tomcat.log.appender"/>
+        </Logger>
+        <Logger name="org.apache.catalina" level="debug" additivity="true">
+            <AppenderRef ref="tomcat.log.appender"/>
+        </Logger>
+        <Logger name="org.apache.tomcat" level="debug" additivity="true">
+            <AppenderRef ref="tomcat.log.appender"/>
+        </Logger>
+        <Logger name="org.springframework.boot.web.embedded.tomcat" level="debug" additivity="true">
+            <AppenderRef ref="tomcat.log.appender"/>
+        </Logger>
+        <Logger name="com.catalogap.infrastructure.repository.mybatis" level="debug" additivity="true">
+            <AppenderRef ref="sql.log.appender"/>
+        </Logger>
+
+        <Logger name="front.log" level="debug" additivity="true">			
+            <AppenderRef ref="front.log.appender"/>			
+        </Logger>			
+        <Root level="debug">
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "label": "npm-run-dev",
+      "detail": "execute npm run dev",
+      "isBackground": true, // バックグラウンドでタスクを実行
+      "presentation": { "reveal": "silent" }, // タスクが実行中でもエディタを隠さない
+      "group": {
+        "kind": "build",
+        "isDefault": true // デフォルトのビルドタスクとして指定
+      }
+    }
+  ]
+}

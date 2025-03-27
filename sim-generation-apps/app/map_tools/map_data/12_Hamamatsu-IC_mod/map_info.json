@@ -1,0 +1,54 @@
+{
+  "name": "12_Hamamatsu-IC_mod",
+  "aabb": [
+    [
+      137.62140847849395,
+      34.83682027282701
+    ],
+    [
+      137.76722929077445,
+      34.83778611617854
+    ],
+    [
+      137.62073146279158,
+      34.90044014996846
+    ],
+    [
+      137.76666461314488,
+      34.9014082689179
+    ]
+  ],
+  "obb": [
+    [
+      -7166,
+      2600
+    ],
+    [
+      6080,
+      -4603
+    ],
+    [
+      6678,
+      -3505
+    ],
+    [
+      -6569,
+      3698
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -244.45263671875,
+      -452.30908203125
+    ],
+    61.46183395385742
+  ],
+  "center": [
+    -73689.97817268869,
+    -125159.90899857199
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/12_Hamamatsu-IC_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/12_Hamamatsu-IC_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/12_Hamamatsu-IC_mod/12_Hamamatsu-IC_mod_xodr_road_coordinates.json"
+}

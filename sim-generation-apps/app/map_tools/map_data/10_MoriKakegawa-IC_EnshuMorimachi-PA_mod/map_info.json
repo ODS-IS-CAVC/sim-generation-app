@@ -1,0 +1,54 @@
+{
+  "name": "10_MoriKakegawa-IC_EnshuMorimachi-PA_mod",
+  "aabb": [
+    [
+      137.88867995190358,
+      34.82220642392825
+    ],
+    [
+      137.9573831085002,
+      34.82253222709121
+    ],
+    [
+      137.8886219965016,
+      34.83004902139581
+    ],
+    [
+      137.95733166558327,
+      34.83037491913912
+    ]
+  ],
+  "obb": [
+    [
+      -3139,
+      322
+    ],
+    [
+      -3126,
+      -498
+    ],
+    [
+      3157,
+      -396
+    ],
+    [
+      3143,
+      425
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      8.844482421875,
+      -36.691436767578125
+    ],
+    0.9360620975494385
+  ],
+  "center": [
+    -52781.50860610216,
+    -130046.57465109738
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/10_MoriKakegawa-IC_EnshuMorimachi-PA_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/10_MoriKakegawa-IC_EnshuMorimachi-PA_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/10_MoriKakegawa-IC_EnshuMorimachi-PA_mod/10_MoriKakegawa-IC_EnshuMorimachi-PA_mod_xodr_road_coordinates.json"
+}

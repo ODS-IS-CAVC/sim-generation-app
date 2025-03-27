@@ -1,0 +1,54 @@
+{
+  "name": "07-2_Fujieda_ShimadaKanaya_mod",
+  "aabb": [
+    [
+      138.20482976299002,
+      34.883929630049956
+    ],
+    [
+      138.24608401927128,
+      34.884022791611564
+    ],
+    [
+      138.20476481722892,
+      34.902085387384666
+    ],
+    [
+      138.24602815035078,
+      34.90217861151242
+    ]
+  ],
+  "obb": [
+    [
+      -1885,
+      -964
+    ],
+    [
+      -1719,
+      -1281
+    ],
+    [
+      2040,
+      692
+    ],
+    [
+      1873,
+      1010
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      77.2984619140625,
+      -135.5372314453125
+    ],
+    27.711318969726562
+  ],
+  "center": [
+    -25095.88837652933,
+    -122767.4287243316
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/07-2_Fujieda_ShimadaKanaya_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/07-2_Fujieda_ShimadaKanaya_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/07-2_Fujieda_ShimadaKanaya_mod/07-2_Fujieda_ShimadaKanaya_mod_xodr_road_coordinates.json"
+}

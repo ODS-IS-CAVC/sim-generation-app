@@ -1,0 +1,54 @@
+{
+  "name": "09_Kakegawa-PA_mod",
+  "aabb": [
+    [
+      137.9571931556253,
+      34.83015295372554
+    ],
+    [
+      138.0504254137765,
+      34.8305332149089
+    ],
+    [
+      137.9571006037876,
+      34.844251744784785
+    ],
+    [
+      138.05034875715995,
+      34.84463220441179
+    ]
+  ],
+  "obb": [
+    [
+      -4395,
+      189
+    ],
+    [
+      -4261,
+      -772
+    ],
+    [
+      4273,
+      417
+    ],
+    [
+      4139,
+      1378
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -60.7021484375,
+      303.3734130859375
+    ],
+    7.933857440948486
+  ],
+  "center": [
+    -45384.311129407295,
+    -128874.128311506
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/09_Kakegawa-PA_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/09_Kakegawa-PA_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/09_Kakegawa-PA_mod/09_Kakegawa-PA_mod_xodr_road_coordinates.json"
+}

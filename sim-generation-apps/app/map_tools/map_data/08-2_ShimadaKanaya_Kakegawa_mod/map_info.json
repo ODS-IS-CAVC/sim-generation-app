@@ -1,0 +1,54 @@
+{
+  "name": "08-2_ShimadaKanaya_Kakegawa_mod",
+  "aabb": [
+    [
+      138.0048162203185,
+      34.83950632015001
+    ],
+    [
+      138.1130718880968,
+      34.83989883974373
+    ],
+    [
+      138.00477372693973,
+      34.84660083531466
+    ],
+    [
+      138.1130386838555,
+      34.846993457963116
+    ]
+  ],
+  "obb": [
+    [
+      -4950,
+      149
+    ],
+    [
+      -4935,
+      -463
+    ],
+    [
+      4965,
+      -224
+    ],
+    [
+      4950,
+      389
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      7.7041015625,
+      -37.181396484375
+    ],
+    1.384873390197754
+  ],
+  "center": [
+    -40339.175284618024,
+    -128233.11553488488
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/08-2_ShimadaKanaya_Kakegawa_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/08-2_ShimadaKanaya_Kakegawa_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/08-2_ShimadaKanaya_Kakegawa_mod/08-2_ShimadaKanaya_Kakegawa_mod_xodr_road_coordinates.json"
+}

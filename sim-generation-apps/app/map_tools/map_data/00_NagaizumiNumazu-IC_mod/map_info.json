@@ -1,0 +1,54 @@
+{
+  "name": "00_NagaizumiNumazu-IC_mod",
+  "aabb": [
+    [
+      138.85634428972588,
+      35.15240382981624
+    ],
+    [
+      138.91780732701935,
+      35.15220747766542
+    ],
+    [
+      138.85709355674217,
+      35.323529522554615
+    ],
+    [
+      138.91868582072297,
+      35.32333192946962
+    ]
+  ],
+  "obb": [
+    [
+      -2805,
+      -9444
+    ],
+    [
+      -1018,
+      -9958
+    ],
+    [
+      4428,
+      8985
+    ],
+    [
+      2641,
+      9498
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      811.5899658203125,
+      -229.591796875
+    ],
+    73.95740509033203
+  ],
+  "center": [
+    35265.41200964558,
+    -84485.25451701478
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/00_NagaizumiNumazu-IC_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/00_NagaizumiNumazu-IC_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/00_NagaizumiNumazu-IC_mod/00_NagaizumiNumazu-IC_mod_xodr_road_coordinates.json"
+}

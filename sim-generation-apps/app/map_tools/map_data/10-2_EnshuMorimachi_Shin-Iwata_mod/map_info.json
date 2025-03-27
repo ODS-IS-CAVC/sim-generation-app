@@ -1,0 +1,54 @@
+{
+  "name": "10-2_EnshuMorimachi_Shin-Iwata_mod",
+  "aabb": [
+    [
+      137.86828217460248,
+      34.8225658988735
+    ],
+    [
+      137.91701378468494,
+      34.82280916470618
+    ],
+    [
+      137.8682327498846,
+      34.82903827068279
+    ],
+    [
+      137.9169681721116,
+      34.829281594795624
+    ]
+  ],
+  "obb": [
+    [
+      -2231,
+      -37
+    ],
+    [
+      2226,
+      -363
+    ],
+    [
+      2265,
+      162
+    ],
+    [
+      -2193,
+      488
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      16.8837890625,
+      62.418701171875
+    ],
+    85.809326171875
+  ],
+  "center": [
+    -55557.2039249143,
+    -130075.13991588184
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/10-2_EnshuMorimachi_Shin-Iwata_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/10-2_EnshuMorimachi_Shin-Iwata_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/10-2_EnshuMorimachi_Shin-Iwata_mod/10-2_EnshuMorimachi_Shin-Iwata_mod_xodr_road_coordinates.json"
+}

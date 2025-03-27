@@ -1,0 +1,84 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.0'
+	id 'io.spring.dependency-management' version '1.1.2'
+	id 'org.springdoc.openapi-gradle-plugin' version '1.7.0'
+}
+
+group = 'com.catalogap'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '21'
+}
+
+//依存関係のバージョンを集中管理したい場合は、ここに該当する依存関係を追加する
+dependencyManagement {
+}
+
+
+//パラメータを取得する
+def profile = System.getProperty("profile", "local");
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.postgresql:postgresql:42.7.4'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+	implementation 'com.google.code.gson:gson:2.10.1'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3' // MyBatis-Spring-Boot-Starter
+
+	implementation 'org.springframework.boot:spring-boot-starter-actuator' //ヘルスチェック
+	implementation 'com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:2.0.2'
+
+
+	implementation project(':application-core')
+	implementation project(':infrastructure')
+	implementation project(':system-common')
+
+
+	compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+}
+
+configurations {
+	all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	}
+}
+
+
+processResources {
+	//パラメータに従って、使用するpropertiesファイルを指定する
+    doFirst {
+        filter org.apache.tools.ant.filters.ReplaceTokens, tokens: [activeProfile: profile]
+    }
+
+	//パッケージ化(Jarファイル生成),application.propertiesなどを除く
+ 	tasks.named('bootJar') {
+		if (profile == 'prd') {  
+			exclude('application.properties','application-dev.properties','application-local.properties','application-stg.properties','application-prd.properties')
+		}
+   }
+   
+}
+																																																																															
+
+afterEvaluate {
+    tasks.named("forkedSpringBootRun") {
+		workingDir("workDir")
+	}
+}
+openApi {
+    apiDocsUrl.set("http://localhost:8080/api-docs")
+	// outputDir.set(file("$rootDir"))
+	outputDir.set(file("$buildDir/docs"))
+    outputFileName.set("api-specification.json")
+}
+
+
+build.dependsOn("generateOpenApiDocs")

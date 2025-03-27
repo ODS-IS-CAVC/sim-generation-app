@@ -1,0 +1,54 @@
+{
+  "name": "06-2_Shizuoka_FujiedaOkabe_Fujieda_mod",
+  "aabb": [
+    [
+      138.26359002150178,
+      34.91752184531712
+    ],
+    [
+      138.29040372074434,
+      34.9175710503601
+    ],
+    [
+      138.26345827868101,
+      34.96341592585484
+    ],
+    [
+      138.2902869199547,
+      34.963465214421454
+    ]
+  ],
+  "obb": [
+    [
+      -1225,
+      -2538
+    ],
+    [
+      -914,
+      -2684
+    ],
+    [
+      1478,
+      2403
+    ],
+    [
+      1167,
+      2549
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      126.332275390625,
+      -67.308837890625
+    ],
+    64.81361389160156
+  ],
+  "center": [
+    -20375.92809848249,
+    -117516.36187021554
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/06-2_Shizuoka_FujiedaOkabe_Fujieda_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/06-2_Shizuoka_FujiedaOkabe_Fujieda_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/06-2_Shizuoka_FujiedaOkabe_Fujieda_mod/06-2_Shizuoka_FujiedaOkabe_Fujieda_mod_xodr_road_coordinates.json"
+}

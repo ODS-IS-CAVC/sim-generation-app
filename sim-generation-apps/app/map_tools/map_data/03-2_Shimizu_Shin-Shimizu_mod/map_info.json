@@ -1,0 +1,54 @@
+{
+  "name": "03-2_Shimizu_Shin-Shimizu_mod",
+  "aabb": [
+    [
+      138.47200787316427,
+      35.08850255603474
+    ],
+    [
+      138.49991949647628,
+      35.088505786854604
+    ],
+    [
+      138.4719952241836,
+      35.12548936047992
+    ],
+    [
+      138.49991946009865,
+      35.1254925957094
+    ]
+  ],
+  "obb": [
+    [
+      -1558,
+      -1859
+    ],
+    [
+      -1216,
+      -2067
+    ],
+    [
+      1272,
+      2021
+    ],
+    [
+      930,
+      2229
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -142.8919677734375,
+      81.227294921875
+    ],
+    58.66867446899414
+  ],
+  "center": [
+    -1279.340363355779,
+    -99069.7010370923
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/03-2_Shimizu_Shin-Shimizu_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/03-2_Shimizu_Shin-Shimizu_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/03-2_Shimizu_Shin-Shimizu_mod/03-2_Shimizu_Shin-Shimizu_mod_xodr_road_coordinates.json"
+}

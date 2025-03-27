@@ -1,0 +1,54 @@
+{
+  "name": "E1A_SurugawanNumazuSA",
+  "aabb": [
+    [
+      138.79092502785693,
+      35.153042176768786
+    ],
+    [
+      138.82525710381606,
+      35.15295487841798
+    ],
+    [
+      138.79093503993997,
+      35.155854666319264
+    ],
+    [
+      138.82526829737742,
+      35.15576735891938
+    ]
+  ],
+  "obb": [
+    [
+      -2025,
+      33
+    ],
+    [
+      1099,
+      -68
+    ],
+    [
+      1108,
+      194
+    ],
+    [
+      -2017,
+      296
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -458.7916259765625,
+      114.30944061279297
+    ],
+    88.13419342041016
+  ],
+  "center": [
+    28525.858,
+    -93904.825
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/E1A_SurugawanNumazuSA_C.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/E1A_SurugawanNumazuSA_C.fbx",
+  "road_coordinates_path": "map_tools/map_data/E1A_SurugawanNumazuSA/xodr_road_coordinates.json"
+}

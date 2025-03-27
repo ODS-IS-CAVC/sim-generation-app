@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <!--対応MyBatis3.xのバージョン-->
+  <context id="PostgreTables" targetRuntime="MyBatis3">
+
+    <!-- 自動生成MapperにはMapperアノテーションを付与する -->
+    <plugin type="org.mybatis.generator.plugins.MapperAnnotationPlugin"/>
+
+    <commentGenerator>
+      <!--コメントに日付は含まれていない -->
+      <property name="suppressDate" value="true"/>
+    </commentGenerator>
+
+    <!--データベースの接続情報-->
+    <jdbcConnection driverClass="org.postgresql.Driver" connectionURL="jdbc:postgresql://localhost:5432/postgres" userId="postgres" password="QAZwsx1994#">
+    </jdbcConnection>
+
+    <!--javaタイププロセッサ-->
+    <javaTypeResolver >
+      <!--
+            true：DECIMALとNUMERICの場合、BigDecimalを利用する
+            false：デフォルト,
+                scale>0;length>18：BigDecimalを利用する; scale=0;length[10,18]：Longを利用する; scale=0;length[5,9]：Integerを利用する; scale=0;length<5：Shortを利用する;
+         -->
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <!-- javaのModel(Entity)のジェネレータ  Model(Entity)作成先を設定する、targetProjectは絶対パスが必要であるので、自分のパスに変更すること -->
+    <javaModelGenerator targetPackage="com.catalogap.infrastructure.repository.mybatis.generated.entity" targetProject="D:\dll-catalog-back\infrastructure\src\main\java">
+      <!-- targetPackageに基づいて、データベースのschemaに基づいてpackageを再生成する-->
+      <property name="enableSubPackages" value="true" />
+      <!-- getterメソッドでStringタイプフィールドにtrim()メソッドを呼び出す -->
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <!--mapper xmlファイルのジェネレータ   xxxMapper.xml作成先を設定する、targetProjectは絶対パスが必要であるので、自分のパスに変更すること-->
+    <sqlMapGenerator targetPackage="com.catalogap.infrastructure.repository.mybatis.generated.mapper" targetProject="D:\dll-catalog-back\infrastructure\src\main\resources">
+      <!-- targetPackageに基づいて、データベースのschemaに基づいてpackageを再生成する-->
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+    <!--mapperファイルのジェネレータ  xxxMapper.java作成先を設定する、targetProjectは絶対パスが必要であるので、自分のパスに変更すること-->
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.catalogap.infrastructure.repository.mybatis.generated.mapper" targetProject="D:\dll-catalog-back\infrastructure\src\main\java">
+      <!-- targetPackageに基づいて、データベースのschemaに基づいてpackageを再生成する-->
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+
+    <!--表の追加、tableNameはDBのtableの名である。domainObjectNameは作成されるファイル名の接頭辞である-->
+    <table tableName="dl_auth" domainObjectName="DlAuth">
+      <!--生成されたmodelクラスでは、column自体の名前をそのまま使用せず、例えば、columnの「BORN_DATE」の場合は、生成された属性名はBORN_DATEではなくbornDateである -->
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="search_auth" domainObjectName="SearchAuth">
+      <!--生成されたmodelクラスでは、column自体の名前をそのまま使用せず、例えば、columnの「BORN_DATE」の場合は、生成された属性名はBORN_DATEではなくbornDateである -->
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="section_master" domainObjectName="SectionMaster">
+      <!--生成されたmodelクラスでは、column自体の名前をそのまま使用せず、例えば、columnの「BORN_DATE」の場合は、生成された属性名はBORN_DATEではなくbornDateである -->
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="location_master" domainObjectName="LocationMaster">
+      <!--生成されたmodelクラスでは、column自体の名前をそのまま使用せず、例えば、columnの「BORN_DATE」の場合は、生成された属性名はBORN_DATEではなくbornDateである -->
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="scenario_info" domainObjectName="ScenarioInfo">
+      <!--生成されたmodelクラスでは、column自体の名前をそのまま使用せず、例えば、columnの「BORN_DATE」の場合は、生成された属性名はBORN_DATEではなくbornDateである -->
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="nearmiss_info" domainObjectName="NearmissInfo">
+      <!--生成されたmodelクラスでは、column自体の名前をそのまま使用せず、例えば、columnの「BORN_DATE」の場合は、生成された属性名はBORN_DATEではなくbornDateである -->
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="search_code_master" domainObjectName="SearchCodeMaster">
+      <!--生成されたmodelクラスでは、column自体の名前をそのまま使用せず、例えば、columnの「BORN_DATE」の場合は、生成された属性名はBORN_DATEではなくbornDateである -->
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+    <table tableName="dl_history" domainObjectName="DlHistory">
+      <!--生成されたmodelクラスでは、column自体の名前をそのまま使用せず、例えば、columnの「BORN_DATE」の場合は、生成された属性名はBORN_DATEではなくbornDateである -->
+      <property name="useActualColumnNames" value="false"/>
+    </table>
+  </context>
+</generatorConfiguration>

@@ -1,0 +1,58 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.0'
+	id 'io.spring.dependency-management' version '1.1.2'
+	id "com.thinkimi.gradle.MybatisGenerator" version "2.4"
+}
+
+group = 'com.catalogap'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '21'
+}
+
+sourceSets {
+    main {
+        // mybatis SQL map XML ファイルを java 以下でも検知する
+        resources.srcDirs = ["src/main/java", "src/main/resources"]
+    }
+}
+
+repositories {
+	mavenCentral()
+		jcenter()
+}
+
+dependencies {
+    implementation 'org.postgresql:postgresql:42.7.4'
+	implementation project(':application-core')
+	implementation project(':system-common')
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3' // MyBatis-Spring-Boot-Starter
+    implementation  'org.mybatis.generator:mybatis-generator-core:1.4.0' // MyBatis Generator
+}
+
+ // MyBatis Generator
+configurations {
+	mybatisGenerator
+}
+
+mybatisGenerator {
+	verbose = true
+	configFile = file('src/main/resources/generatorConfig.xml')
+}
+
+
+//パラメータを取得する
+def profile = System.getProperty("profile", "local");
+processResources {
+
+	//パラメータに従って、使用するpropertiesファイルを指定する
+	doFirst {
+		filter org.apache.tools.ant.filters.ReplaceTokens, tokens: [activeProfile: profile]
+	}
+}
+
+
+bootJar.enabled = false
+jar.enabled = true

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catalogap.infrastructure.repository.mybatis.mapper.CustomScenarioCodeMapper">
+ <select id="selectHappenSection">
+    SELECT t1.section_id, t1.section_name  
+      FROM section_master t1 
+     INNER JOIN search_auth t2 
+        ON t1.section_id=t2.section_id 
+     WHERE t1.delete_flag = '0'    
+       AND t2.email_address = #{userId} 
+       AND t2.delete_flag = '0'
+     ORDER BY t1.section_id 
+ </select>
+  <select id="selectHappenLocation">
+    SELECT t1.id,t1.location_id,t1.location_name   
+      FROM location_master t1 
+     INNER JOIN search_auth t2 
+        ON t1.section_id=t2.section_id 
+     WHERE t1.section_id = #{sectionId}     
+       AND t1.delete_flag = '0'  
+       AND t2.delete_flag = '0'
+       AND t2.email_address = #{userId}
+     ORDER BY t1.id 
+ </select>
+</mapper>

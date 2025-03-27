@@ -1,0 +1,17 @@
+{
+  "messagesList": {
+    "message001": "Completed records {0} and {1}.",
+    "message002": "Deleted data cannot be restored. Are you sure you want to delete the data?",
+    "message003": "Failed records {0} and {1}.",
+    "message004": "Completed records {0}, but failed {1}.",
+    "message005": "Failed records {0}.",
+    "message006": "Completed records {0}.",
+    "message007": "Failed searching . Please review the search criteria.",
+    "message008": "API request failed, please restart this AP with npm run mock or check the behavior of the backend AP.",
+    "message009": "There was no data to be included in the CSV file. Please review the output conditions.",
+    "message010": "{0} must be alphabetical or numeric.",
+    "message011": "Please enter {0} characters in half-width alphanumeric characters",
+    "message012": "Are you sure you want to delete it?",
+    "message013": "Please enter your {0}"
+  }
+}

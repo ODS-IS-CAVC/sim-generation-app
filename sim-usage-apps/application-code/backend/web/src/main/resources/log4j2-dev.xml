@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+    <properties>
+        <property name="LOG_HOME">/var/log</property>
+        <property name="FILE_FOLDER_NAME_BACKEND">backend</property>
+        <property name="FILE_FOLDER_NAME_TOMCAT">tomcat</property>
+        <property name="FILE_NAME_APPLICATION_ID">D51201A</property>
+        <property name="FILE_NAME_APPLICATION">application</property>
+        <property name="FILE_NAME_SQL">sql</property>
+        <property name="FILE_NAME_TOMCAT">tomcat</property>
+        <property name="LOG_HOME">/var/log</property>		
+        <property name="FILE_FOLDER_NAME_FRONTEND">frontend</property>		
+        <property name="FILE_NAME_FRONTEND_APP">frontend-app</property>		        
+    </properties>
+    <Appenders>
+        <Console name="application.log.appender" Target="SYSTEM_OUT">
+           <PatternLayout pattern="BackAppLog:[%-5level] [%date{yyyy/MM/dd HH:mm:ss.SSS}] [%X{Slf4jMDCFilter.UUID}][%t - %tid] %C.%M:%L - %m%n"/>
+        </Console>
+        <Console name="sql.log.appender" Target="SYSTEM_OUT">
+           <PatternLayout pattern="SqlLog:[%-5level] [%date{yyyy/MM/dd HH:mm:ss.SSS}] [%X{Slf4jMDCFilter.UUID}][%t - %tid] %C.%M:%L - %m%n"/>
+        </Console>
+        <Console name="tomcat.log.appender" Target="SYSTEM_OUT">
+           <PatternLayout pattern="TomcatLog:[%-5level] [%date{yyyy/MM/dd HH:mm:ss.SSS}] [%X{Slf4jMDCFilter.UUID}][%t - %tid] %C.%M:%L - %m%n"/>
+        </Console>
+        <Console name="front.log.appender" Target="SYSTEM_OUT">
+           <PatternLayout pattern="FrontAppLog:[%-5level] [%date{yyyy/MM/dd HH:mm:ss.SSS}] [%X{Slf4jMDCFilter.UUID}][%t - %tid] %C.%M:%L - %m%n"/>
+        </Console>	
+    </Appenders>
+    <Loggers>
+        <Logger name="application.log" level="debug" additivity="false">
+            <AppenderRef ref="application.log.appender"/>
+        </Logger>
+        <Logger name="org.apache.coyote" level="debug" additivity="false">
+            <AppenderRef ref="tomcat.log.appender"/>
+        </Logger>
+        <Logger name="org.apache.catalina" level="debug" additivity="false">
+            <AppenderRef ref="tomcat.log.appender"/>
+        </Logger>
+        <Logger name="org.apache.tomcat" level="debug" additivity="false">
+            <AppenderRef ref="tomcat.log.appender"/>
+        </Logger>
+        <Logger name="org.springframework.boot.web.embedded.tomcat" level="debug" additivity="false">
+            <AppenderRef ref="tomcat.log.appender"/>
+        </Logger>
+      <Logger name="com.catalogap.infrastructure.repository.mybatis" level="debug" additivity="false">
+            <AppenderRef ref="sql.log.appender"/>
+        </Logger>
+        <Logger name="front.log" level="debug" additivity="false">			
+            <AppenderRef ref="front.log.appender"/>			
+        </Logger>			
+
+        <Root level="debug">
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>

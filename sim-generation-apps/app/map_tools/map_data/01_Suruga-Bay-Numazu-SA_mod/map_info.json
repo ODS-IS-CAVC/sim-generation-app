@@ -1,0 +1,54 @@
+{
+  "name": "01_Suruga-Bay-Numazu-SA_mod",
+  "aabb": [
+    [
+      138.73081403923902,
+      35.152196820883205
+    ],
+    [
+      138.8564189592471,
+      35.15189244613321
+    ],
+    [
+      138.7308937242001,
+      35.180393911285094
+    ],
+    [
+      138.85654200551127,
+      35.18008922011959
+    ]
+  ],
+  "obb": [
+    [
+      -6041,
+      326
+    ],
+    [
+      5401,
+      -2684
+    ],
+    [
+      5727,
+      -1444
+    ],
+    [
+      -5715,
+      1565
+    ]
+  ],
+  "obb_center-angle": [
+    [
+      -157.09033203125,
+      -559.11376953125
+    ],
+    75.26119995117188
+  ],
+  "center": [
+    26751.41833715624,
+    -92466.95947869812
+  ],
+  "epsg": "6676",
+  "opendrive_path": "efs/try/data/XODR/01_Suruga-Bay-Numazu-SA_mod.xodr",
+  "3dmapModel_path": "efs/try/data/Asset/01_Suruga-Bay-Numazu-SA_mod.amx",
+  "road_coordinates_path": "map_tools/map_data/01_Suruga-Bay-Numazu-SA_mod/01_Suruga-Bay-Numazu-SA_mod_xodr_road_coordinates.json"
+}
